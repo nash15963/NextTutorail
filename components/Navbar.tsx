@@ -1,9 +1,16 @@
-import React from 'react'
+import Link from "next/link";
+import styles from "../styles/Navbar.module.css";
 
-const NavBar = () => {
+const Navbar = () => {
   return (
-    <div>NavBar</div>
-  )
-}
+    <div className={styles.navbar}>
+      <div className={styles.links}>
+        <Link href="/"> Home</Link>
+        <Link href="/about"> About</Link>
+        <Link href="/profile"> Profile</Link>
+      </div>
+    </div>
+  );
+};
 
-export default NavBar
+export default Navbar;
