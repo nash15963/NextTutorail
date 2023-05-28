@@ -5,6 +5,7 @@ interface CoinProp {
         coins : coin[]
     }
 }
+
 interface coin {
     name: string;
     icon: string;
@@ -29,6 +30,7 @@ const CoinList = ({ coinData }:CoinProp) => {
 
 // getServerSideProps
 // getStaticProps
+
 
 export const getStaticProps = async () => {
   const data = await Axios.get(
