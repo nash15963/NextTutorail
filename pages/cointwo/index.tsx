@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Axios from "axios";
 import styles from "@/styles/Coin.module.css";
+import { useEffect, useState } from "react";
 
 interface CoinProp {
   coinData: {
@@ -16,7 +17,19 @@ interface coin {
   price: number;
 }
 
-const CoinList = ({ coinData }: CoinProp) => {
+const CoinClient = () => {
+    const [coinData, setCoinData] = useState({ coins: [] });
+
+    useEffect(()=>{
+        const getData = async () => {
+            const data = await Axios.get(
+                "https://api.coinstats.app/public/v1/coins?skip=0"
+            );
+            setCoinData(data.data);
+        }
+        getData()
+    },[])
+
   return (
     <div>
       <Navbar />
@@ -35,22 +48,7 @@ const CoinList = ({ coinData }: CoinProp) => {
   );
 };
 
-// getServerSideProps
-// getStaticProps
 
-export const getStaticProps = async () => {
-  const data = await Axios.get(
-    "https://api.coinstats.app/public/v1/coins?skip=0"
-  );
-
-  return {
-    props: {
-      coinData: data.data,
-    },
-    revalidate: 10,
-  };
-};
-
-export default CoinList;
+export default CoinClient;
 
 // https://pokeapi.co/api/v2/pokemon?limit=9

@@ -1,0 +1,32 @@
+.main h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #000;
+    text-align: center;
+}
+
+.main p{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    color: #000;
+    text-align: center;
+}
+
+.Clink{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: #1a400aea;
+    text-align: center;
+    text-decoration: none;
+} 
+
+.counter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin: 5px auto;
+}
