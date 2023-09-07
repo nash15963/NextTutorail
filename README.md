@@ -14,4 +14,4 @@ pnpm dev
 
 ## See Demo
 
-Open [http://localhost:3000](https://tysonnext.vercel.app/) with your browser to see the result.
+Open [Demo](https://tysonnext.vercel.app/) with your browser to see the result.
