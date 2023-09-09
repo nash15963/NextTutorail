@@ -8,8 +8,8 @@ const Navbar = () => {
         <Link href="/"> Home</Link>
         <Link href="/about"> About</Link>
         <Link href="/profile"> Profile</Link>
-        <Link href="/coins">CSR</Link>
-        <Link href="/cointwo">SSR</Link>
+        <Link href="/coins">SSR</Link>
+        <Link href="/cointwo">CSR</Link>
       </div>
     </div>
   );
