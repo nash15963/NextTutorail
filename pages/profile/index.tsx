@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const ProfileDefault = () => {
   const [count, setCount] = useState(0);
-
+  let countTemp = 0;
   return (
     <div className={styles.main}>
       <Navbar />
@@ -17,9 +17,19 @@ const ProfileDefault = () => {
       </p>
       <div className={styles.counter}>
         <button onClick={() => setCount(count + 1)}>+</button>
-        <p>Count: {count}</p>
+        <p>Count -- 1: {count}</p>
         <button onClick={() => setCount(count - 1)}>-</button>
       </div>
+
+      <div className={styles.counter}>
+        <button onClick={() => countTemp++}>+</button>
+        <p>Count  -- 2: {countTemp}</p>
+        <button onClick={() => {
+          countTemp -- ;
+          console.log(countTemp)
+        }}>-</button>
+      </div>
+
     </div>
   );
 };
